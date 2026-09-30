@@ -1,18 +1,21 @@
-[tool.poetry]
+[project]
 name = "vocabgenerator"
 version = "0.1.0"
 description = ""
-authors = ["cambrian-dk <daryl.kohyikai@gmail.com>"]
+requires-python = ">=3.10"
+authors = [{ name = "cambrian-dk", email = "<daryl.kohyikai@gmail.com>" }]
 readme = "README.md"
+dependencies = [
+    "pydub>=0.25.1",
+    "selenium>=4.4.3",
+    "PyYAML>=6.0",
+    "webdriver-manager>=3.8.3",
+    "google-cloud-texttospeech>=2.12.1"
+]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-pydub = "^0.25.1"
-selenium = "^4.4.3"
-PyYAML = "^6.0"
-webdriver-manager = "^3.8.3"
-google-cloud-texttospeech = "^2.12.1"
 
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core"]
